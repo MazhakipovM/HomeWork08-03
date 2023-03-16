@@ -16,6 +16,7 @@ public class Main {
         return arr;
     }
 
+
     ///zadacha 1
     public static void task1() {
         int[] arr = generateRandomArray();
