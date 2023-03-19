@@ -4,9 +4,16 @@ public class Main {
     public static void main(String[] args) {
 
         task1();
+
+        task2();
+
+        task3();
+
+        task4();
+
+
     }
 
-    // Объявить метод «сгенерироватьМассив»
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
         int[] arr = new int[30];
@@ -17,7 +24,7 @@ public class Main {
     }
 
 
-    ///zadacha 1
+
     public static void task1() {
         int[] arr = generateRandomArray();
         int sum = 0;
@@ -27,28 +34,18 @@ public class Main {
         System.out.println(sum);
 
 
-        //zadacha 2
-        int[] arr2 = generateRandomArray();
-        int maxSum = 99_000;
-        int minSum = 200_001;
 
-        for (int i = 0; i < arr2.length; i++) {
-            if (arr2[i] < minSum) {
-                minSum = arr2[i];
-            }
+
+    }
+
+    private static void task4() {
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int y = reverseFullName.length- 1; y >=0; y-- ){
+            System.out.print(reverseFullName[y]);
         }
+    }
 
-        for (int i = 0; i < arr2.length; i++) {
-            if (arr2[i] > maxSum) {
-                maxSum = arr2[i];
-            }
-        }
-        System.out.println(" Максимальная сумма трат за день составила " + maxSum + " рублей");
-
-        System.out.println(" Минимальная сумма трат за день составила " + minSum + " рублей");
-
-
-//        //zadacha 3
+    private static void task3() {
 
         int[] arr3 = generateRandomArray();
         int sum3 = 0;
@@ -57,13 +54,25 @@ public class Main {
         }
         double srednee = (double) sum3/arr3.length;
         System.out.println(" Средняя сумма трат за месяц составила "+ srednee + "рублей");
+    }
 
+    private static void task2() {
+        int[] arr2 = generateRandomArray();
+        int maxSum = 99_000;
+        int minSum = 200_001;
 
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int y = reverseFullName.length- 1; y >=0; y-- ){
-            System.out.println(reverseFullName[y]);
+        for (int i = 0; i < arr2.length; i++) {
+            if (arr2[i] < minSum) {
+                minSum = arr2[i];
+            }
+            else  {
+                  maxSum = arr2[i];
+              }
         }
 
 
+        System.out.println(" Максимальная сумма трат за день составила " + maxSum + " рублей");
+
+        System.out.println(" Минимальная сумма трат за день составила " + minSum + " рублей");
     }
 }
